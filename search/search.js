@@ -4,13 +4,13 @@ let searchInput = document.querySelector('#searchBar');
 searchInput.addEventListener('keyup', search);
 const vegetablesContainer = document.getElementById("vegetables");
 function search(event) {
-  searchTerm = event.target.value.toLowerCase();
+  let searchTerm = event.target.value.toLowerCase();
   vegetablesContainer.innerHTML = ''
   let newItems = listOfVegetables.filter((title) => {
     if (title.name.toLowerCase().trim().includes(searchTerm.trim())) 
     {
-      check=true;
-      return true;
+      check=1;
+      return 1;
     }
     else
     {
@@ -102,7 +102,7 @@ function initStore() {
 function writeDate(items) {
 
   items.forEach(item => {
-    if(check==true)
+    if(check==1)
     {
       document.getElementById("warning").innerText='';
     }
