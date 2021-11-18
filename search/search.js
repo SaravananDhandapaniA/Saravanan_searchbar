@@ -18,7 +18,7 @@ function search(event) {
     }
     
   });
-  console.log('new', newItems)
+  console.log('new', newItems);
   writeDate(newItems);
 }
 
